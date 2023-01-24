@@ -50,6 +50,7 @@
                         {{link.label}}
                     </a>
                 </li>
+                <button class="header-button">JOIN US</button>
             </ul>
         </nav>
 
@@ -59,6 +60,9 @@
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
     header{
+        /*width: 100%;
+        top: 0;
+        position: fixed;*/
         min-height: 65px;
         text-align: center;
         @include center;
@@ -73,6 +77,7 @@
             margin: 2rem 1rem;
             @include center;
             li a{
+                
                 display: inline-block;
                 padding: 1rem;
                 text-decoration: none;
@@ -81,12 +86,23 @@
                 &.active, &:hover{
                     border-bottom: 4px solid $secondaryColor;
                 }
-                color: $fontColor;
+                color: white;
                 text-transform: uppercase;
                 font-size: .8rem;
                 
             }
     
+        }
+        .header-button{
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            padding: 11px 23px;
+            line-height: 16px;
+            font-size: 13px;
         }
     }
 

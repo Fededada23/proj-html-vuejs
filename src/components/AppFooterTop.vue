@@ -2,149 +2,57 @@
     export default {
         data(){
             return{
-                dcComicsLinks: [
+                avadaLinks: [
                 {
-                    text: 'Characters',
+                    text: 'Sed semper, nisl id feugiat eleifend, erat est digssim felis, quis auctor elit enim nec ante. Cras et nibh risus. Pellentesque non mi sit amet mi intermentum.',
                     url: '#',
                     current: false,
                 },
-                {
-                    text: 'Comics',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Movies',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Tv',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Games',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Collectibles',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Videos',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Fans',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'News',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Shop',
-                    url: '#',
-                    current: false,
-                }
+                
             ],
-            shopLinks: [
+            topicLinks: [
                 {
-                    text: 'Shop DC',
+                    text: 'Morbi vitae dui euismod vulputate sollicitudin',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'Shop DC Collectibles',
+                    text: 'Morbi vitae dui euismod vulputate sollicitudin',
                     url: '#',
                     current: false,
-                }
+                },
+                {
+                    text: 'Morbi vitae dui euismod vulputate sollicitudin',
+                    url: '#',
+                    current: false,
+                },
             ],
-            dcLinks: [
+            postLinks: [
                 {
-                    text: 'Term of Use',
+                    text: 'Morbi vitae dui euismod vulputate sollicitudin',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'Privacy policy (New)',
+                    text: 'Morbi vitae dui euismod vulputate sollicitudin',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'Ad Choices',
+                    text: 'Morbi vitae dui euismod vulputate sollicitudin',
                     url: '#',
                     current: false,
                 },
-                {
-                    text: 'Advertising',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Jobs',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Subscriptions',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Talent Workshop',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'CPSC Certificates',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Ratings',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Shop Help',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Contact Us',
-                    url: '#',
-                    current: false,
-                }
+               
             ],
-            sitesLinks: [
+            latestLinks: [
                 {
-                    text: 'DC',
-                    url: '#',
-                    current: false,
-                },{
-                    text: 'MAD Magazine',
+                    text: 'Dario Pineda on Morbi vitae dui euismod vulputate sollicitudin',
                     url: '#',
                     current: false,
                 },
                 {
-                    text: 'DC Kids',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'DC Universe',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'DC Power Visa',
+                    text: 'Dario Pineda on Morbi vitae dui euismod vulputate sollicitudin',
                     url: '#',
                     current: false,
                 },
@@ -152,9 +60,6 @@
             social: [
                 {
                     logo: 'footer-facebook.png',
-                },
-                {
-                    logo: 'footer-periscope.png',
                 },
                 {
                     logo: 'footer-pinterest.png',
@@ -180,48 +85,45 @@
         <div class="footer-top-content">
             <div class="footer-top-content-links">
                 <div class="col">
-                    <h4>Dc Comics</h4>
+                    <h4>AVADA TECH FORUM</h4>
                     <ul>
-                        <li v-for="(link, index) in dcComicsLinks" :key="index">
+                        <li v-for="(link, index) in avadaLinks" :key="index">
                             <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>
-                    <h4>Shop</h4>
+                </div>
+                <div class="col">    
+                    <h4>POPULAR TOPICS</h4>
                     <ul>
-                        <li v-for="(link, index) in shopLinks" :key="index">
+                        <li v-for="(link, index) in topicLinks" :key="index">
                             <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h4>Dc</h4>
+                    <h4>RECENT POSTS</h4>
                     <ul>
-                        <li v-for="(link, index) in dcLinks" :key="index">
+                        <li v-for="(link, index) in postLinks" :key="index">
                             <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h4>Sites</h4>
+                    <h4>LATEST REPLIES</h4>
                     <ul>
-                        <li v-for="(link, index) in sitesLinks" :key="index">
+                        <li v-for="(link, index) in latestLinks" :key="index">
                             <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-            <div class="dc_bg">
-                <div class="img_dc_bg">
                 </div>
             </div>
         </div>
     </div>
     <div class="social">
             <div class="col-but">
-                <button class="footer-button">Sign-up now!</button>
+                <span>Copyright 2012 - 2023 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</span>
             </div>
             <div class="icon">
-                <h3 class="follow">Follow us</h3>
                 <ul>
                     <li v-for="(object, index) in social" :key="index">
                         <a href="#"><img :src="getImagePath(object.logo)" alt="loghi"></a>
@@ -239,13 +141,14 @@
     background-image: url(/images/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: gray
     }
     .footer-top-content{
         @include container;
         @include d-flex(space-between, '');
         height: 100%;
         &-links{
-            width: 50%;
+            width: 100%;
             padding: 1rem 0;
             @include d-flex('', '');
             .col:nth-child(2){
@@ -254,7 +157,7 @@
             
             h4{
                 text-transform: uppercase;
-                color: white;
+                color: black;
             }
             ul{
                 padding: 1rem 0;
@@ -268,50 +171,48 @@
             
         }
     }
-    .dc_bg {
-        background-image: url(/images/dc-logo-bg.png);
-        background-size: cover;
-        background-position: right center;
-        width: 600px;
-    }
 
     .social {
     height: 150px;
-    background-color: #303030;
+    background-color: white;
     align-items: center;
     display: flex;
     justify-content: space-around;
-    @include upbold;
-    .icon {
-        display: flex;
-        align-items: center;
-        @include upbold;
-        ul {
-            display: flex;
-            gap: .5em;
+    
+    color: gray;
+        .span{
+            font-size: 10px;
         }
-        li {
+        .icon {
             display: flex;
-            color: $white;
-            list-style: $listnone;
-            &:hover {
-                filter: brightness(100);
+            align-items: center;
+            @include upbold;
+            ul {
+                display: flex;
+                gap: .5em;
+            }
+            li {
+                display: flex;
+                color: $white;
+                list-style: $listnone;
+                &:hover {
+                    filter: brightness(100);
+                }
+            }
+            .follow {
+                @include upbold;
+                color: #0282f9;
+                padding-right: .5em;
             }
         }
-        .follow {
-            @include upbold;
-            color: #0282f9;
-            padding-right: .5em;
+    }
+    .footer-button {
+        @include button;
+        &:hover {
+            font-size: 15px;
+            cursor: pointer;
+            filter: brightness(1.2);
         }
-    }
-}
-.footer-button {
-    @include button;
-    &:hover {
-        font-size: 15px;
-        cursor: pointer;
-        filter: brightness(1.2);
-    }
 }
     
 </style>      
