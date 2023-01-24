@@ -11,5 +11,9 @@ export default {
     </div>
 </template>
 <style lang="scss">
+@use '../styles/partials/mixins' as *;
+.button-xlarge{
+        @include button
+    }
     
 </style>

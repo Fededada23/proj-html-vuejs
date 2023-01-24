@@ -34,12 +34,14 @@ export default {
     </div>
 </template>
 <style lang="scss">
+@use '../styles/partials/mixins' as *;
 #album{
     background-color: white;
     color: black;
     display: flex;
     justify-content: space-between;
     align-content: center;
+    padding: 150px;
 }
     
 </style>

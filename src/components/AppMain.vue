@@ -3,12 +3,14 @@ import AppJumbotron from '../components/AppJumbotron.vue';
 import AppBanner from '../components/AppBanner.vue';
 import AppTitle from '../components/AppTitle.vue';
 import cardsContainer from '../components/cardsContainer.vue';
+import AppFeature from '../components/AppFeature.vue';
 export default {
       components:{
         AppJumbotron,
         AppBanner,
         AppTitle,
         cardsContainer,
+        AppFeature,
         
       } 
     }
@@ -20,6 +22,7 @@ export default {
         <AppBanner/>
         <AppTitle/>
         <cardsContainer/>
+        <AppFeature/>
     </div>
 </template>
 
