@@ -1,10 +1,14 @@
 <script>
 import AppJumbotron from '../components/AppJumbotron.vue';
 import AppBanner from '../components/AppBanner.vue';
+import AppTitle from '../components/AppTitle.vue';
+import cardsContainer from '../components/cardsContainer.vue';
 export default {
       components:{
         AppJumbotron,
         AppBanner,
+        AppTitle,
+        cardsContainer,
         
       } 
     }
@@ -14,6 +18,8 @@ export default {
     <div id="main-content">
         <AppJumbotron/>
         <AppBanner/>
+        <AppTitle/>
+        <cardsContainer/>
     </div>
 </template>
 

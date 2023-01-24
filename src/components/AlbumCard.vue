@@ -11,7 +11,8 @@ export default {
         <div class="album-image">
             <img :src="singleCard.thumb" :alt="singleCard.series">
         </div>
-        <h4>{{singleCard.series}}</h4>
+        <h2>{{ singleCard.title }}</h2>
+        <p>{{ singleCard.text }}</p>
     </div>
 </template>
 <style lang="scss">
