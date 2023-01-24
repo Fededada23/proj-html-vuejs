@@ -1,14 +1,17 @@
 <script lang="ts">
 export default {
+    props: {
+        data: Object
+    }
     
 }
 </script>
 <template lang="">
     <div id="feature">    
-            <p>FEATURED ARTICLE</p>
-            <h3>Cras Malesuada Et Orci Eget Pharetra</h3>
-            <p>In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum sadips ets ipsums dolores ficilis uns leo lectus.</p>
-            <button class="button-xlarge">READ MORE</button>
+            <p>{{data.preTitle}}</p>
+            <h3>{{data.title}}</h3>
+            <p>{{data.description}}</p>
+            <button class="button-xlarge">{{data.button}}</button>
     </div>
 </template>
 <style lang="scss">

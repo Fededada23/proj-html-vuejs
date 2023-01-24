@@ -1,5 +1,8 @@
 <script lang="ts">
 export default {
+    props: {
+        data: Object
+    }
     
 }
 </script>

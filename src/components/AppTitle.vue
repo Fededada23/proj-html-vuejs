@@ -1,12 +1,14 @@
 <script lang="ts">
 export default {
-    
+    props: {
+        data: Object
+    }
 }
 </script>
 <template lang="">
     <div id="title">    
-            <p>PHASELLUS EGET METUS</p>
-            <h2>All The Latest News</h2>
+            <p v-if="data.preTitle">{{data.preTitle}}</p>
+            <h2>{{data.title}}</h2>
     </div>
 </template>
 <style lang="scss">

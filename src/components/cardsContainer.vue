@@ -1,6 +1,6 @@
 <script>
 import AlbumCard from '../components/AlbumCard.vue';
-export default {
+/*export default {
     components: {
         AlbumCard
     },
@@ -22,15 +22,46 @@ export default {
                     title: "Donec ornare pretium eget scelisque justo",
                     text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
                 },
+            ],
+            albumCardsTwo: [
+                {
+                    thumb: "/images/post_feat_img_25-320x202.jpg",
+                    title: "Morbi vitae dui euismod vulputate sollicitudin",
+                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
+                },
+                {
+                    thumb: "/images/post_feat_img_24-320x202.jpg",
+                    title: "Vivamus pellenteque, felis quis varius",
+                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
+                },
+                {
+                    thumb: "/images/post_feat_img_23-320x202.jpg",
+                    title: "Donec ornare pretium eget scelisque justo",
+                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
+                },
             ]
         }
     }
     
+}*/
+
+export default {
+    name: 'cardsContainer',
+    components: {
+        AlbumCard
+    },
+    props: {
+        data: Array
+    }
 }
+
 </script>
 <template lang="">
     <div id="album">
-            <AlbumCard v-for="(element, index) in albumCards" :key="index" :singleCard="element"/>
+        <!--
+           <AlbumCard v-for="(element, index) in albumCards" :key="index" :singleCard="element"/> 
+        -->
+        <AlbumCard v-for="(element, index) in data" :singleCard="element"/>
     </div>
 </template>
 <style lang="scss">
