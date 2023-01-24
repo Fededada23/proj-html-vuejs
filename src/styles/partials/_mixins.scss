@@ -1,0 +1,44 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+@mixin d-flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+
+@mixin upbold {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@mixin button {
+    background-color: #303030;
+    border: 3px solid rgb(35, 56, 219);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
