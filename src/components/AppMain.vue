@@ -89,9 +89,7 @@ export default {
 <template>
     <div id="main-content">
         <div id="jumbotron">
-        </div>
-        <div class="album">
-            <AlbumCard v-for="(element, index) in albumCards" :key="index" :singleCard="element"/>
+        
         </div>
     </div>
 </template>
@@ -99,9 +97,10 @@ export default {
 <style lang="scss">
 @use '../styles/partials/variables' as *;
     #jumbotron {
-    height: 20rem;
-    background-image: url('/images/jumbotron.jpg');
+    height: 50rem;
+    background-image: url('/images/home_slider_bg.jpg');
     background-size: cover;
+    background-attachment: fixed;
     }
 
     #main-content{
