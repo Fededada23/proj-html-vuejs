@@ -8,8 +8,8 @@ export default {
 </script>
 <template lang="">
     <div id="banner">    
-            <p>AVADA FORUM IS THE PLACE TO BE</p>
-            <p>In quis lectus sed leo elementum faucibus in dapibus dictum. Nulla molestie tortor nec lectus venenatis, sed blandit dui finibus. dolor at, bibendum purus. Donec vehicula nec tortor ac finibus.</p>
+            <p>{{data.title}}</p>
+            <p>{{data.preTitle}}</p>
     </div>
 </template>
 <style lang="scss">
@@ -17,8 +17,9 @@ export default {
     display: flex;
     flex-direction: column;
     background-color: lightgray;
-    color: white;
+    color: #3b3d3f;
     padding: 150px;
+    align-items: center;
 }
     
 </style>

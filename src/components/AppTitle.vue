@@ -17,7 +17,8 @@ export default {
     flex-direction: column;
     background-color: white;
     color: black;
-    padding: 150px;
+    align-items: center;
+    padding-top:100px
 }
     
 </style>

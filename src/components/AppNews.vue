@@ -17,19 +17,31 @@ export default {
 }
 </script>
 <template lang="">
-    <div id="news">    
-          <AppFeature :data="feature"/>
-          <AppTitle :data="title"/>
-          <cardsContainer :data="cards"/>
+    <div id="news">   
+        <div class="left-components">
+            <AppFeature :data="feature"/>
+        </div>   
+        <div class="right-components"> 
+            <AppTitle :data="title"/>
+            <div class="d-flex flex-column"><cardsContainer :data="cards"/></div>
+            
+        </div>    
     </div>
 </template>
 <style lang="scss">
 #news{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     background-color: lightgray;
     color: white;
     padding: 150px;
+    .left-components{
+        width: 70%;
+    }
+    .right-components{
+        width: 30%;
+        
+    }
 }
     
 </style>

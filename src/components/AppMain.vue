@@ -8,6 +8,14 @@ import AppNews from './AppNews.vue';
 export default {
     data: function(){
         return {
+            titleJumb:{
+                title: 'TECH FORUM',
+                preTitle: 'Discuss all the latest technology news and trends'
+            },
+            titleBanner:{
+                title: 'AVADA FORUM IS THE PLACE TO BE',
+                preTitle: 'In quis lectus sed leo elementum faucibus in dapibus dictum. Nulla molestie tortor nec lectus venenatis, sed blandit dui finibus. dolor at, bibendum purus. Donec vehicula nec tortor ac finibus.'
+            },
             titleOne:{
                 title: 'All The Latest News',
                 preTitle: 'PHASELLUS EGET METUS'
@@ -38,17 +46,17 @@ export default {
             ],
             albumCardsTwo: [
                 {
-                    thumb: "/images/post_feat_img_25-320x202.jpg",
+                    thumb: "/images/post_feat_img_20-320x202.jpg",
                     title: "Morbi vitae dui euismod vulputate sollicitudin",
                     text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
                 },
                 {
-                    thumb: "/images/post_feat_img_24-320x202.jpg",
+                    thumb: "/images/post_feat_img_21-320x202.jpg",
                     title: "Vivamus pellenteque, felis quis varius",
                     text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
                 },
                 {
-                    thumb: "/images/post_feat_img_23-320x202.jpg",
+                    thumb: "/images/post_feat_img_22-320x202.jpg",
                     title: "Donec ornare pretium eget scelisque justo",
                     text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
                 },
@@ -76,8 +84,8 @@ export default {
 </script>
 <template>
     <div id="main-content">
-        <AppJumbotron/>
-        <AppBanner/>
+        <AppJumbotron :data="titleJumb"/>
+        <AppBanner :data="titleBanner"/>
         <AppTitle :data="titleOne"/>
         <cardsContainer :data="albumCards"/>
         <AppFeature :data="feature"/>

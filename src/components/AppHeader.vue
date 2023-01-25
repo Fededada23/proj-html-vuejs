@@ -61,9 +61,9 @@
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
     header{
-        /*width: 100%;
+        width: 100%;
         top: 0;
-        position: fixed;*/
+        position: fixed;
         min-height: 65px;
         text-align: center;
         @include center;

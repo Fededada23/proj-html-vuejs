@@ -83,11 +83,11 @@
 <template>
     <div id="footer-top">
         <div class="footer-top-content">
-            <div class="footer-top-content-links">
+            <div class="row d-flex pt-5">
                 <div class="col">
                     <h4>AVADA TECH FORUM</h4>
                     <ul>
-                        <li v-for="(link, index) in avadaLinks" :key="index">
+                        <li  v-for="(link, index) in avadaLinks" :key="index">
                             <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>
@@ -95,7 +95,7 @@
                 <div class="col">    
                     <h4>POPULAR TOPICS</h4>
                     <ul>
-                        <li v-for="(link, index) in topicLinks" :key="index">
+                        <li class="my-2" v-for="(link, index) in topicLinks" :key="index">
                             <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>
@@ -103,7 +103,7 @@
                 <div class="col">
                     <h4>RECENT POSTS</h4>
                     <ul>
-                        <li v-for="(link, index) in postLinks" :key="index">
+                        <li class="my-2" v-for="(link, index) in postLinks" :key="index">
                             <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>
@@ -138,39 +138,15 @@
 
     #footer-top{
     height: 30rem;
-    background-image: url(/images/footer-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    
     color: gray
     }
     .footer-top-content{
-        @include container;
-        @include d-flex(space-between, '');
-        height: 100%;
-        &-links{
-            width: 100%;
-            padding: 1rem 0;
-            @include d-flex('', '');
-            .col:nth-child(2){
-                margin: 0  2rem;
-            }
-            
-            h4{
-                text-transform: uppercase;
-                color: black;
-            }
-            ul{
-                padding: 1rem 0;
-                li{
-                    font-size: 15px;
-                    a{
-                        color: #b4b4b4;
-                    }
-                }
-            }
-            
+        ul{
+            padding-left: 0;
+            padding-top: 10px;
         }
-    }
+    };
 
     .social {
     height: 150px;

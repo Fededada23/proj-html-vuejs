@@ -22,6 +22,7 @@ export default {
     flex-direction: column;
     color: white;
     padding: 150px;
+    background-size: cover;
     .button-xlarge{
         @include button;
         background-color:black;

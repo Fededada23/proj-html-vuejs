@@ -57,7 +57,7 @@ export default {
 
 </script>
 <template lang="">
-    <div id="album">
+    <div id="album-cards">
         <!--
            <AlbumCard v-for="(element, index) in albumCards" :key="index" :singleCard="element"/> 
         -->
@@ -66,7 +66,7 @@ export default {
 </template>
 <style lang="scss">
 @use '../styles/partials/mixins' as *;
-#album{
+#album-cards{
     background-color: white;
     color: black;
     display: flex;
