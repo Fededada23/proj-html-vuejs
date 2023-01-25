@@ -87,7 +87,7 @@
                 <div class="col">
                     <h4>AVADA TECH FORUM</h4>
                     <ul>
-                        <li  v-for="(link, index) in avadaLinks" :key="index">
+                        <li class="my-2"  v-for="(link, index) in avadaLinks" :key="index">
                             <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>
@@ -137,14 +137,25 @@
 @use '../styles/partials/mixins' as *;
 
     #footer-top{
-    height: 30rem;
+    height: 20rem;
     
-    color: gray
+    color: gray;
+    max-width: 1440px;
+    margin: 0 auto;
     }
     .footer-top-content{
+        h4{
+            font-size: 18px;
+            color:black;
+            padding-top: 10px;
+        }
         ul{
             padding-left: 0;
-            padding-top: 10px;
+            
+            li a{
+                font-size: 15px;
+                color:grey
+            }
         }
     };
 

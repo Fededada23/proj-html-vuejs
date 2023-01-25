@@ -61,6 +61,23 @@ export default {
                     text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
                 },
             ],
+            albumCardsThree: [
+                {
+                    thumb: "/images/post_feat_img_23-147x118.jpg",
+                    title: "Donec ornare pretium eget scelisque justo",
+                    text: "October 11th, 2015|Comments Off"
+                },
+                {
+                    thumb: "/images/post_feat_img_22-147x118.jpg",
+                    title: "Fusce sollicitudin nunc sed placerat varius",
+                    text: "October 11th, 2015|Comments Off"
+                },
+                {
+                    thumb: "/images/post_feat_img_20-147x118.jpg",
+                    title: "Proin eu purus sed aru aliquet curabir vens",
+                    text: "October 11th, 2015|Comments Off"
+                },
+            ],
             feature:{
                 title:"FEATURED ARTICLE",
                 preTitle:"Cras Malesuada Et Orci Eget Pharetra",
@@ -86,14 +103,13 @@ export default {
     <div id="main-content">
         <AppJumbotron :data="titleJumb"/>
         <AppBanner :data="titleBanner"/>
-        <AppTitle :data="titleOne"/>
-        <cardsContainer :data="albumCards"/>
-        <AppFeature :data="feature"/>
-        <cardsContainer :data="albumCardsTwo"/>
-        <AppNews :feature="feature" :title="titleTwo" :cards="albumCards"/>
-
-        
-        
+        <div class="container">
+            <AppTitle :data="titleOne"/>
+            <cardsContainer :data="albumCards"/>
+            <AppFeature :data="feature"/>
+            <cardsContainer :data="albumCardsTwo"/>
+            <AppNews :feature="feature" :title="titleTwo" :cards="albumCardsThree"/>
+        </div>
     </div>
 </template>
 
@@ -101,7 +117,11 @@ export default {
 @use '../styles/partials/variables' as *;
 
 #main-content{
-    background-color: #1c1c1c;
+    background-color: white;
+    .container{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     #jumbotron {
     height: 50rem;
     background-image: url('/images/home_slider_bg.jpg');

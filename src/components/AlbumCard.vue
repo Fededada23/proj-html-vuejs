@@ -16,5 +16,12 @@ export default {
     </div>
 </template>
 <style lang="scss">
-
+.album-card{
+    h2{
+    font-size: 18px;
+    }
+    p{
+        font-size: 10px;
+    }
+}    
 </style>

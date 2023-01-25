@@ -6,7 +6,8 @@ export default {
     props: {
         feature: Object,
         title: Object,
-        cards:Array
+        cards:Array,
+    
     },
     components:{
         AppFeature,
@@ -22,9 +23,8 @@ export default {
             <AppFeature :data="feature"/>
         </div>   
         <div class="right-components"> 
-            <AppTitle :data="title"/>
-            <div class="d-flex flex-column"><cardsContainer :data="cards"/></div>
-            
+            <AppTitle :data="title" :small="true"/>
+            <cardsContainer :data="cards" :vertical="true"/>
         </div>    
     </div>
 </template>
@@ -32,14 +32,16 @@ export default {
 #news{
     display: flex;
     justify-content: center;
-    background-color: lightgray;
+   
     color: white;
-    padding: 150px;
+    
     .left-components{
         width: 70%;
+       
     }
     .right-components{
         width: 30%;
+        
         
     }
 }

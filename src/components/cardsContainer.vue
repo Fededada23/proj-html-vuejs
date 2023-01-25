@@ -1,78 +1,70 @@
 <script>
 import AlbumCard from '../components/AlbumCard.vue';
-/*export default {
-    components: {
-        AlbumCard
-    },
-    data: function(){
-        return {
-            albumCards: [
-                {
-                    thumb: "/images/post_feat_img_25-320x202.jpg",
-                    title: "Morbi vitae dui euismod vulputate sollicitudin",
-                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
-                },
-                {
-                    thumb: "/images/post_feat_img_24-320x202.jpg",
-                    title: "Vivamus pellenteque, felis quis varius",
-                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
-                },
-                {
-                    thumb: "/images/post_feat_img_23-320x202.jpg",
-                    title: "Donec ornare pretium eget scelisque justo",
-                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
-                },
-            ],
-            albumCardsTwo: [
-                {
-                    thumb: "/images/post_feat_img_25-320x202.jpg",
-                    title: "Morbi vitae dui euismod vulputate sollicitudin",
-                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
-                },
-                {
-                    thumb: "/images/post_feat_img_24-320x202.jpg",
-                    title: "Vivamus pellenteque, felis quis varius",
-                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
-                },
-                {
-                    thumb: "/images/post_feat_img_23-320x202.jpg",
-                    title: "Donec ornare pretium eget scelisque justo",
-                    text: "Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl"
-                },
-            ]
-        }
-    }
-    
-}*/
-
 export default {
     name: 'cardsContainer',
     components: {
         AlbumCard
     },
     props: {
-        data: Array
+        data: Array,
+        vertical: Boolean
     }
 }
 
 </script>
 <template lang="">
-    <div id="album-cards">
-        <!--
-           <AlbumCard v-for="(element, index) in albumCards" :key="index" :singleCard="element"/> 
-        -->
+    <div id="album-cards" :class="{ vertical: vertical }">
         <AlbumCard v-for="(element, index) in data" :singleCard="element"/>
     </div>
 </template>
 <style lang="scss">
 @use '../styles/partials/mixins' as *;
 #album-cards{
-    background-color: white;
     color: black;
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 150px;
+    
+    
+    &.vertical{
+        padding:0;
+        flex-direction: column;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+        .album-image{
+            overflow: hidden;
+            float: left;
+            margin: 0 20px 5px 0;
+            width: 144px;
+            img{
+                opacity: 1;
+                transition: opacity 1s,transform 1s;
+                width: 100%;
+                max-width: 100%;
+                display: block;
+                -webkit-user-select: none;
+                user-select: none;
+                box-shadow: none;
+                border-radius: 0;
+                margin-bottom: 20px;
+            }
+        }
+        h2{
+            margin: 15px 0 3px;
+            clear: none;
+            font-size: 18px;
+            
+        }
+        p{
+            overflow: hidden;
+            margin-bottom: 13px;
+            padding: 0;
+            color: #333;
+            font-size: 13px;
+        }
+    }
 }
     
 </style>

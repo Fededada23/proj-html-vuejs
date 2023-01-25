@@ -23,6 +23,7 @@ export default {
     color: white;
     padding: 150px;
     background-size: cover;
+    margin-bottom: 50px;
     .button-xlarge{
         @include button;
         background-color:black;
